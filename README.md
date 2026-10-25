@@ -1,4 +1,4 @@
-# QuantumDotHEOM
+# QuantumDot
 
 Basic tutorial for open quantum system dynamics (quantum dots driven by chirped ultrafast laser pulses). Dissipative exciton-phonon interactions are treated with a rational pole-decomposition of the spectral density.
 
@@ -46,23 +46,7 @@ gfortran -O3 -fopenmp -std=f2008 \
   -o qdot
 
 ```
-
 ---
-
-## Usage
-
-The program expects inputs via standard input (`stdin`) in the following order:
-
-```text
-<prefix>
-<w0 [cm^-1]>  <e0 [a.u.]>  <tau0 [fs]>  <phisec [fs^2]>
-<lambda>
-<delta1 [cm^-1]>
-<delta2 [cm^-1]>
-<temperature [K]>
-<wc [eV]>
-
-```
 
 ### Example
 
@@ -86,20 +70,6 @@ Run the executable:
 
 ```
 
----
-
-## Output
-
-* `<prefix>.param`: Echo of converted parameters and run metadata.
-* `<prefix>.result`: Four-column table generated across the parallelized field amplitude scan:
-* **Col 1:** Effective pulse area parameter ($\mathcal{E} \sqrt{\tau_p}$)
-* **Col 2:** Population of ground state $\rho_{11}$
-* **Col 3:** Population of exciton state $\rho_{22}$
-* **Col 4:** Population of biexciton state $\rho_{44}$
-
-
-
----
 
 ## License
 
